@@ -5,22 +5,23 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Thêm danh mục</h2>
+<h2>Thêm Danh Mục</h2>
 
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
-    <div class="form-horizontal">
-        <h4>Category</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-        @Html.Partial("PVCreateEditCategory",Model)
-    </div>
+
+    @* Nhung Partial View vao form cha*@
+    @Html.Partial("PVCreateEditCategory", Model)
+
+</div>
 }
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
