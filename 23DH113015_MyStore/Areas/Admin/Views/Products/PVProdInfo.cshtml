@@ -1,0 +1,55 @@
+﻿@model _23DH113015_MyStore.Models.Product
+
+@{
+    ViewBag.Title = "PVProdInfo";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<head>
+    <style>
+        img {
+            width;
+            250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<div class="container-fluid">
+    <div class="dl-horizontal">
+        <div class="col-md-4">
+            <img src="@Html.DisplayFor(model => model.ProductImage)" />
+        </div>
+        <div class="col-md-8">
+            <dl>
+                <dt>Tên sản phẩmM</dt>
+                <dd>
+                    @Html.DisplayFor(model => model.ProductName)
+                </dd>
+
+                <dt> Mô tả</dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProductDescription)
+                </dd>
+
+                <dt> Đơn giá</dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ProductPrice)
+                </dd>
+
+                <dt> Hình ảnh</dt>
+
+                <dd>
+                </dd>
+
+                <dt> Danh mục</dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Category.CategoryName)
+                </dd>
+                <dt style="padding:10px"></dt>
+            </dl>
+        </div>
+    </div>
+</div>
+
